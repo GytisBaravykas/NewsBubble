@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>News Bubble</title>
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/NewsBubble.css">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    
+<div class="container">
+     
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner slider" id="post">
+      <div class="item active">
+          <a href="#"><img src="images/beer-comercial.jpg"></a>
+      </div>
+
+      <div class="item">
+          <a href="#"><img src="images/Coca-Cola-ad.jpg"></a>
+      </div>
+    
+      <div class="item">
+          <a href="#"><img src="images/favorit-ad.jpg"></a>
+      </div>
+    </div>
+    </div>
+</div>
+<div class="container">
+<nav class="navbar navbar-inverse menu" id="yes" data-spy="affix" data-offset-top="297" style="z-index:10;">
+    <div><img id="logo" src="images/logo.jpg"></div>
+    <div class="container-fluid">
+        <select class="language" style="float: right;">
+            <option>LT</option>
+            <option>EN</option>
+            <option>RU</option>
+            <option>DE</option>
+        </select>
+        <a href="#"><div class="social-links"><span class="fa fa-twitter"></span></div></a>
+        <a href="#"><div class="social-links"><span class="fa fa-facebook"></span></div></a>
+        <a href="#"><div class="social-links"><span class="fa fa-google-plus"></span></div></a>
+        <div id="follow" style="float:right; margin: 8px 8px 0px; font-size:21px;"><b>follow</b></div>
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="clear: both; margin-right: 10px;">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+        </div>
+  <div class="collapse navbar-collapse" id="myNavbar" style="background-color: #ebebeb;">
+    <ul class="nav navbar-nav navbar-right" id="my" style="clear: both;">
+        <li class="dropdown" id="drop">
+            <form class="navbar-form navbar-left" id="search-form" style="padding: 0; margin-bottom: 0; margin-left: 5px; margin-right: 10px; border: 0;">
+            <div class="input-group" style="margin:0;" data-toggle="dropdown">
+            <input type="text" class="input-search" placeholder="Product search...">
+                <div class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+            </div>
+            <ul class="dropdown-menu search-drop">
+                <li>
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""><b> Sports</b></label>
+                </div>
+                </li>
+                <li>
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""><b> Business</b></label>
+                </div>
+                </li>
+                <li>
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""><b> Entertainment</b></label>
+                </div>
+                </li>
+                <li>
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""><b> Science</b></label>
+                </div>
+                </li>
+                <li>
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""><b> Art</b></label>
+                </div>
+                </li>
+                <li>
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""><b> Worldwide</b></label>
+                </div>
+                </li>
+            </ul>
+        </form>
+        </li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">Health</a></li>
+        <li><a href="#">Worldwide</a></li>
+        <li id="account">
+        <a href="#">
+        Account</a>
+      </li>
+        <li id="sign-in" type="button" data-toggle="modal" data-target="#myModal"><a href="javascript:void(0)">Sign in</a>
+        </li>
+        <div class="dropdown" style="float:right; margin-right:3px;"><button type="button" class="drop-full dropdown-toggle" data-toggle="dropdown">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+        <ul class="dropdown-menu desk">
+          <div class="container-fluid" style="padding: 5px;">
+            <div class="row" style="margin-left:0; margin-right:0;">
+                <div class="col-md-2">
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 5px;">Sport</a>
+                        <a href="#">Football</a>
+                        <a href="#">Soccer</a>
+                        <a href="#">Basketball</a>
+                        <a href="#">Rally</a>
+                    </div>
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">Politics</a>
+                        <a href="#">Worldwide</a>
+                        <a href="#">Lithuania</a>
+                        <a href="#">U.S.</a>
+                        <a href="#">Spotlight</a>
+                    </div>
+                    
+                </div>
+                <div class="col-md-2">
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">Business</a>
+                        <a href="#">Stocks</a>
+                        <a href="#">Market</a>
+                        <a href="#">Deals</a>
+                        <a href="#">People</a>
+                    </div>
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">Culture</a>
+                        <a href="#">Tradition</a>
+                        <a href="#">Festivals</a>
+                        <a href="#">Events</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">Science</a>
+                        <a href="#">Development</a>
+                        <a href="#">Future</a>
+                        <a href="#">Medicine</a>
+                        <a href="#">Nature</a>
+                    </div>
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">More...</a>
+                        <a href="#">Weather</a>
+                        <a href="#">Media</a>
+                        <a href="#">Video news</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">Health</a>
+                        <a href="#">Fitness</a>
+                        <a href="#">Recipes</a>
+                        <a href="#">Family</a>
+                        <a href="#">Lifestyle</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">Life</a>
+                        <a href="#">Entertainment</a>
+                        <a href="#">Travel</a>
+                        <a href="#">Autos</a>
+                        <a href="#">Art</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">Regions</a>
+                        <a href="#">U.S.</a>
+                        <a href="#">Europe</a>
+                        <a href="#">Asia</a>
+                        <a href="#">S. America</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+            </ul>
+        </div>
+    </ul>
+    </div>
+   </div>
+</nav>
+<div class="new">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-5">
+            <div class="panel panel-default" style="border: none; box-shadow: none;">
+                <div class="panel-body main">
+                    <a href="article.html"><img src="images/flag-Lithuania.jpg">
+                    <h2 class="main-text">IV Lithuanian's statute has been found. Russia is in debt?</h2></a>
+                    <div class="spliter"></div>
+                    <a href="article.html"><h3 class="main-text">Trump speaks of a new world order.</h3></a>
+                    <div class="spliter"></div>
+                    <a href="article.html"><h3 class="main-text">Brand new jet with reusable fuel.</h3></a>
+                    <div class="spliter"></div>
+                    <a href="#"><h3 class="main-text">Army's new "Iron man" suit stronger then ever.</h3></a>
+                </div>
+            </div>
+        </div>
+     <div class="col-xs-12 col-sm-6 col-md-7">
+       <div class="row flex-size">
+        <div class="col-xs-6 col-sm-4 col-md-4">
+            <div class="panel panel-default" style="border: none; border-bottom: 2px solid aqua; box-shadow: none; height: 90%;">
+                <div class="panel-body main">
+                <a href="#"><img src="images/car-registration.jpg">
+                <h3 class="main-text">New automobile laws angers drivers. "This is absurd !"</h3></a>
+            </div>
+        </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-4">
+            <div class="panel panel-default" style="border: none; border-bottom: 2px solid aqua; box-shadow: none; height: 90%;">
+                <div class="panel-body main">
+                    <a href="#"><img src="images/food-prices.jpg">
+                    <h3 class="main-text">Prices are going up, while salary stays the same. Why?</h3></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-4" id="mobile-gone">
+            <div class="panel panel-default" style="border: none; border-bottom: 2px solid aqua; box-shadow: none; height: 90%;">
+                <div class="panel-body main">
+                    <a href="#"><img src="images/recruits-army.jpg">
+                    <h3 class="main-text">New recruits will have a much harder training course.</h3></a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-7" style="margin-top: 10px;">
+      <div class="row flex-size">
+        <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="panel panel-default" style="border: none; border-bottom: 2px solid aqua; box-shadow: none; height: 94%;">
+                <div class="panel-body main">
+                    <a href="#"><img src="images/storm.jpg">
+                    <h2 class="main-text">Tragedy in Latvia. Masive storm cause major chaos.</h2></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="panel panel-default" style="border: none; border-bottom: 2px solid aqua; box-shadow: none; height: 94%;">
+                <div class="panel-body main">
+                    <a href="#"><img src="images/dreamjob.jpg">
+                    <h2 class="main-text">Dream jobs only abroad or right at your country?</h2></a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="spliter" style="height: 8px; border-radius: 10px; background-color: #003c6f; margin: 20px 0;"></div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-8">
+            <div class="panel panel-default" style="box-shadow: none; border-radius: 4px;">
+                <div class="panel-body" id="myslid">
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; border-top: 1px solid black; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-3 slid-col">
+                                <img src="images/policijos-reidas.jpg">
+                            </div>
+                            <div class="col-xs-7 col-md-9">
+                                <h3 class="column-text">Police raid in the city. Looking for fugitives?</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; border-top: 1px solid black; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-3 slid-col">
+                                <img src="images/army.png">
+                            </div>
+                            <div class="col-xs-7 col-md-9">
+                                <h3 class="column-text">New war in Kazakhstan? U.S.  send 40.000 troops.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; border-top: 1px solid black; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-3 slid-col">
+                                <img src="images/sex-post.jpg" style="">
+                            </div>
+                            <div class="col-xs-7 col-md-9">
+                                <h3 class="column-text">New found advantages of sexual intercourse.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; border-top: 1px solid black; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-3 slid-col">
+                                <img src="images/studies.jpg" style="">
+                            </div>
+                            <div class="col-xs-7 col-md-9">
+                                <h3 class="column-text">Books are no longer a main study material.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; border-top: 1px solid black; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-3 slid-col">
+                                <img src="images/seimas.jpg" style="">
+                            </div>
+                            <div class="col-xs-7 col-md-9">
+                                <h3 class="column-text">New taxes approved by ministry department. </h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <a class="linked" href="#">
+                <div class="panel panel-default" style="box-shadow: none; border: none;">
+                    <div class="panel-body main" id="ad-space1">
+                        <img src="images/pringles-ad.jpg">
+                    </div>
+                </div>
+            </a>
+            <a class="linked" href="#">
+                <div class="panel panel-default" style="box-shadow: none; border: none;">
+                    <div class="panel-body main" id="ad-space2">
+                        <img src="images/snickers-ad.jpg">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <h3 style="margin: 2px; font-weight: bold;">Spotlight</h3>
+            <div class="spliter" style="margin-bottom:15px"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none;">
+                        <div class="panel-body main">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-4">
+                                <img src="images/Dalia%20Grybauskaite.jpg">
+                            </div>
+                            <div class="col-xs-7 col-md-8">
+                                <h3 class="column-text">Lithuanian president's unexpected responce to Trumps actions. "The third world war will be just a source for more profit."</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none;">
+                        <div class="panel-body main">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-4">
+                                <img src="images/education.jpg">
+                            </div>
+                            <div class="col-xs-7 col-md-8">
+                                <h3 class="column-text">Graduates leaving abroad, so is our country's future?</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <h3 style="margin: 2px;font-weight: bold;">Must see</h3>
+            <div class="spliter" style="margin-bottom:15px"></div>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-5">
+            <a class="linked" href="#"><div class="panel panel-default" style="border: none; box-shadow: none;">
+                <div class="panel-body main">
+                    <img src="images/trump.jpg">
+                    <h2 class="main-text">U.S. President announces new law agaist Russia.</h2>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-7">
+            <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <a class="linked" href="#"><div class="panel panel-default" style="border: none; box-shadow: none;">
+                <div class="panel-body main">
+                    <img src="images/car-crash.jpg">
+                    <h3 class="main-text">Major crash in Vilnius old town.</h3>
+                </div>
+            </div>
+            </a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+            <a class="linked" href="#"><div class="panel panel-default" style="border: none; box-shadow: none;">
+                <div class="panel-body main">
+                    <img src="images/Lithuania-soccer.jpg">
+                    <h2 class="main-text">Lithuania - Poland 2:0 "A new day for hope".</h2>
+                </div>
+            </div>
+            </a>
+            </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-7">
+            <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none;">
+                        <div class="panel-body main">
+                            <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <img src="images/science.jpg">
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8">
+                                <h3 class="main-text">New medicine to treat cancer. Affects are amazing.</h3>
+                            </div>
+                            </div>
+                        </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12" style="padding-top: 0;">
+            <h3 style="margin: 2px; font-weight: bold;">Weather</h3>
+            <div class="spliter" style="margin-bottom:10px"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none;">
+                <div class="panel-body main"><h3 style="margin:0; font-weight: bold;">Today - Vilnius, Lithuania    22&deg;C<span class="glyphicon glyphicon-cloud" style="margin-left:4px;"></span> </h3></div></div>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Sing in</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                        <form>
+                            <div id="login"> 
+                            <h3 id="message">A new code has been send to your email.</h3>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                            </div>
+                            <br>
+                            <div style="text-align: center">
+                            <button class="btn btn-primary" id="log-btn">Login</button>
+                            </div>
+                            </div>
+                        <div id="lost-pass">
+                            <h3>Tipe your email. You will receive a new code. You can change it later on.</h3>
+                            <input type="text" class="form-control" name="Email" placeholder="Email" value="">
+                            <br>
+                            <div style="text-align: center">
+                            <button class="btn btn-success" id="submit">Submit</button>
+                            <button id="stop-recover" class="btn btn-danger">Cancel</button>
+                            </div>
+                        </div>
+                        <div id="reg-account">
+                                <input type="text" class="form-control" name="password" placeholder="Email">
+                            <br>
+                                <input type="password" class="form-control" name="password" placeholder="Password">
+                            <br>
+                                <input type="password" class="form-control" placeholder="Repeat password">
+                            <br>
+                                <input type="Text" class="form-control" placeholder="Country">
+                            <br>
+                                <div class="row">
+                                    <div class="col-xs-4 col-sm-4 col-md-4"><input type="password" class="form-control" name="password" placeholder="Day"></div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4"><input type="text" class="form-control" placeholder="Month"></div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4"><input type="text" class="form-control" placeholder="Year"></div>
+                            </div>
+                            <br>
+                            <div style="text-align: center">
+                            <button class="btn btn-success" id="btn2">Register</button>
+                            <button id="cancel" class="btn btn-danger">Cancel</button>
+                            </div>
+                        </div>
+                        </form>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6" style="text-align: center;">
+                                <h3>Don't have an account? <button type="button" class="btn btn-primary" id="register">Register</button></h3>
+                                <h3>Forgot password? <button class="btn btn-primary" type="button" id="forgot-pass">Recover</button></h3>
+                                
+                                <h3>Connect with:</h3>
+                                <a href="#" class="btn btn-primary btn-lg" style="background-color: #0084b4; width:60px; text-align:center;">
+                                <span class="fa fa-twitter" style="font-size: 30px;"></span>
+                                </a>    
+                                <a href="#" class="btn btn-primary btn-lg" style="background-color: #3B5998; width:60px; text-align:center;">
+                                <span class="fa fa-facebook" style="font-size: 30px;"></span>
+                                </a>
+                                <a href="#" class="btn btn-primary btn-lg" style="background-color: #d34836; width:60px; text-align:center;">
+                                <span class="fa fa-google-plus" style="font-size: 30px;"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+        </div>
+     </div>
+<footer class="container-fluid" style="padding: 0;">
+                <div class="main-footer">
+                    <a href=""><h3>About us</h3></a>
+                    <a href=""><h3>Terms of Servise</h3></a>
+                    <a href=""><h3>Cookies</h3></a>
+                    <a href=""><h3>Privacy policy</h3></a>
+                    <a href=""><h3>Copyright</h3></a>
+            </div>
+</footer>
+<script type="text/javascript">
+$("#forgot-pass").click(function(){
+    $("#login").css("display","none");
+    $("#reg-account").css("display","none");
+    $("#lost-pass").css("display","block");
+});
+    
+$("#stop-recover").click(function(){
+    $("#lost-pass").css("display","none");
+    $("#login").css("display","block");
+});
+    
+$("#submit").click(function(){
+    $("#lost-pass").css("display","none");
+    $("#login").css("display","block");
+    $("#message").show().delay(10000).fadeOut();
+});
+    
+$("#register").click(function(){
+    $("#login").css("display","none");
+    $("#lost-pass").css("display","none");
+    $("#reg-account").css("display","block");
+});
+$("#cancel").click(function(){
+    $("#login").css("display","block");
+    $("#reg-account").css("display","none");
+});
+
+$("#log-btn").click(function(){
+    $("#myModal").modal("hide");
+    $("#account").css("display","block");
+    $("#sign-in").css("display","none");
+    $("#logo").css({'margin-left':'5px'});
+});
+
+$(document).ready(function() {
+  // slick carousel
+  $('#myslid').slick({
+    vertical: true,
+    autoplay:true,
+    autoplaySpeed:1500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    verticalSwiping: true,
+  });
+});
+
+$('.dropdown-menu').click(function(e) {
+   e.stopPropagation();
+});
+    
+$(document).ready(function(){
+    $(".input-group").dropdown();
+});
+
+var x = $( "#post" ).width();
+document.getElementById("yes").style.width=(x+"px");
+    
+$(window).resize(function() {
+var y = $( "#post" ).width();
+document.getElementById("yes").style.width=(y+"px");
+});
+</script>
+</body>
+</html>

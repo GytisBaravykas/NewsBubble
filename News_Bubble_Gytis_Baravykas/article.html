@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>News Bubble</title>
+<link rel="shortcut icon" href="favicon.ico"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/NewsBubble.css">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    
+<div class="container">
+     
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner slider" id="post">
+      <div class="item active">
+          <a href="#"><img src="images/beer-comercial.jpg"></a>
+      </div>
+
+      <div class="item">
+          <a href="#"><img src="images/Coca-Cola-ad.jpg"></a>
+      </div>
+    
+      <div class="item">
+          <a href="#"><img src="images/favorit-ad.jpg"></a>
+      </div>
+    </div>
+    </div>
+</div>
+<div class="container">
+<nav class="navbar navbar-inverse menu" id="yes" data-spy="affix" data-offset-top="297" style="z-index:10;">
+    <div><img id="logo" src="images/logo.jpg"></div>
+    <div class="container-fluid">
+        <select class="language" style="float: right;">
+            <option>LT</option>
+            <option>EN</option>
+            <option>RU</option>
+            <option>DE</option>
+        </select>
+        <a href="#"><div class="social-links"><span class="fa fa-twitter"></span></div></a>
+        <a href="#"><div class="social-links"><span class="fa fa-facebook"></span></div></a>
+        <a href="#"><div class="social-links"><span class="fa fa-google-plus"></span></div></a>
+        <div id="follow" style="float:right; margin: 8px 8px 0px; font-size:21px;"><b>follow</b></div>
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="clear: both; margin-right: 10px;">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+        </div>
+  <div class="collapse navbar-collapse" id="myNavbar" style="background-color: #ebebeb;">
+    <ul class="nav navbar-nav navbar-right" id="my" style="clear: both;">
+        <li class="dropdown" id="drop">
+            <form class="navbar-form navbar-left" id="search-form" style="padding: 0; margin-bottom: 0; margin-left: 5px; margin-right: 10px; border: 0;">
+            <div class="input-group" style="margin:0;" data-toggle="dropdown">
+            <input type="text" class="input-search" placeholder="Product search...">
+                <div class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+            </div>
+            <ul class="dropdown-menu search-drop">
+                <li>
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""><b> Sports</b></label>
+                </div>
+                </li>
+                <li>
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""><b> Business</b></label>
+                </div>
+                </li>
+                <li>
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""><b> Entertainment</b></label>
+                </div>
+                </li>
+                <li>
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""><b> Science</b></label>
+                </div>
+                </li>
+                <li>
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""><b> Art</b></label>
+                </div>
+                </li>
+                <li>
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""><b> Worldwide</b></label>
+                </div>
+                </li>
+            </ul>
+        </form>
+        </li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">Health</a></li>
+        <li><a href="#">Worldwide</a></li>
+        <li id="account">
+        <a href="#">
+        Account</a>
+      </li>
+        <li id="sign-in" type="button" data-toggle="modal" data-target="#myModal"><a href="javascript:void(0)">Sign in</a>
+        </li>
+        <div class="dropdown" style="float:right; margin-right:3px;"><button type="button" class="drop-full dropdown-toggle" data-toggle="dropdown">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+        <ul class="dropdown-menu desk">
+          <div class="container-fluid" style="padding: 5px;">
+            <div class="row" style="margin-left:0; margin-right:0;">
+                <div class="col-md-2">
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 5px;">Sport</a>
+                        <a href="#">Football</a>
+                        <a href="#">Soccer</a>
+                        <a href="#">Basketball</a>
+                        <a href="#">Rally</a>
+                    </div>
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">Politics</a>
+                        <a href="#">Worldwide</a>
+                        <a href="#">Lithuania</a>
+                        <a href="#">U.S.</a>
+                        <a href="#">Spotlight</a>
+                    </div>
+                    
+                </div>
+                <div class="col-md-2">
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">Business</a>
+                        <a href="#">Stocks</a>
+                        <a href="#">Market</a>
+                        <a href="#">Deals</a>
+                        <a href="#">People</a>
+                    </div>
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">Culture</a>
+                        <a href="#">Tradition</a>
+                        <a href="#">Festivals</a>
+                        <a href="#">Events</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">Science</a>
+                        <a href="#">Development</a>
+                        <a href="#">Future</a>
+                        <a href="#">Medicine</a>
+                        <a href="#">Nature</a>
+                    </div>
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">More...</a>
+                        <a href="#">Weather</a>
+                        <a href="#">Media</a>
+                        <a href="#">Video news</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">Health</a>
+                        <a href="#">Fitness</a>
+                        <a href="#">Recipes</a>
+                        <a href="#">Family</a>
+                        <a href="#">Lifestyle</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">Life</a>
+                        <a href="#">Entertainment</a>
+                        <a href="#">Travel</a>
+                        <a href="#">Autos</a>
+                        <a href="#">Art</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="drop-element">
+                        <a href="#" style="font-size: 25px; padding-bottom: 3px;">Regions</a>
+                        <a href="#">U.S.</a>
+                        <a href="#">Europe</a>
+                        <a href="#">Asia</a>
+                        <a href="#">S. America</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+            </ul>
+        </div>
+    </ul>
+    </div>
+   </div>
+</nav>           
+<div class="new">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-8" style="">
+            <div class="panel panel-default" style="border: none; box-shadow: none; margin-bottom: 4px;">
+                <div class="panel-body" style="padding:0;">
+                    <h3 style="float: left; margin:8px; margin-left: 0; font-weight: bold;">Worldwide</h3>
+                    <div style="float:right;">
+                    <a href="#" class="btn btn-primary btn-sl" style="background-color: #3B5998; text-align:center; border-radius: 10px;">
+                    <span class="fa fa-facebook" style="font-size:16px;"></span>  
+                    </a>
+                    <a href="#" class="btn btn-primary btn-sl" style="background-color: #0084b4; text-align:center; border-radius: 15px;">
+                    <span class="fa fa-twitter" style="font-size:16px;"></span>
+                    </a>
+                    <a href="#" class="btn btn-primary btn-sl" style="border: none;background-color: #d34836; text-align:center; border-radius: 10px;">
+                    <i class="fa fa-google-plus" style="font-size:20px;"></i>
+                    </a>
+                    </div>
+                    <h3 style="float:right; margin:8px;">Share</h3>
+                </div>
+                <h1 style="float: left; font-weight: bold;">New war in Kazakhstan? U.S. sends 40.000 troops.</h1>
+            <div class="spliter" style="border-radius: 10px; background-color: #003c6f; margin-top: 5px; margin-bottom: 5px;"></div>
+            </div>
+            <div type="button" data-toggle="modal" data-target="#picture-slide"><a href="javascript:void(0)"><img src="images/army.png" style="width: 100%;"></a>
+            </div>
+            <h3><b>War is a state of armed conflict between societies. It is generally characterized by extreme aggression, destruction, and mortality, using regular or irregular military forces. An absence of war is usually called "peace".</b></h3>
+            <p class="atc-text">Warfare refers to the common activities and characteristics of types of war, or of wars in general.[1] Total war is warfare that is not restricted to purely legitimate military targets, and can result in massive civilian or other non-combatant suffering and casualties.
+
+            While some scholars see war as a universal and ancestral aspect of human nature,[2] others argue it is a result of specific socio-cultural or ecological circumstances.[3]</p>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div id="news-feed">
+            <h2 style="margin-top: 0;">Top stories</h2>
+            <div class="panel panel-default" style="box-shadow: none; border-radius: 4px; margin-top: 0;">
+                <div class="panel-body" id="atc-slid">
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; border-top: 1px solid black; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-4 slid-col">
+                                <img src="images/policijos-reidas.jpg">
+                            </div>
+                            <div class="col-xs-7 col-md-8">
+                                <h3 class="column-text">Police raid in the city. Looking for fugitives?</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; border-top: 1px solid black; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-4 slid-col">
+                                <img src="images/army.png">
+                            </div>
+                            <div class="col-xs-7 col-md-8">
+                                <h3 class="column-text">New war in Kazakhstan? U.S.  send 40.000 troops.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; border-top: 1px solid black; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-4 slid-col">
+                                <img src="images/army-training.jpg">
+                            </div>
+                            <div class="col-xs-7 col-md-8">
+                                <h3 class="column-text">NATO military exercises in East Europe.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; border-top: 1px solid black; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-4 slid-col">
+                                <img src="images/sex-post.jpg" style="">
+                            </div>
+                            <div class="col-xs-7 col-md-8">
+                                <h3 class="column-text">New found advantages of sexual intercourse.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; border-top: 1px solid black; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-4 slid-col">
+                                <img src="images/studies.jpg" style="">
+                            </div>
+                            <div class="col-xs-7 col-md-8">
+                                <h3 class="column-text">Books are no longer a main study material.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; border-top: 1px solid black; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-4 slid-col">
+                                <img src="images/seimas.jpg" style="">
+                            </div>
+                            <div class="col-xs-7 col-md-8">
+                                <h3 class="column-text">New taxes approved by ministry department. </h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+          </div>
+        </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <a class="linked" href="#">
+                <div class="panel panel-default" style="box-shadow: none; border: none;">
+                    <div class="panel-body main">
+                        <img src="images/snickers-ad.jpg">
+                    </div>
+                </div>
+            </a>
+        </div>
+<div class="col-xs-12 col-sm-8 col-md-8">
+    <p class="atc-text">The deadliest war in history, in terms of the cumulative number of deaths since its start, is the Second World War, from 1939 to 1945, with 60–85 million deaths, followed by the Mongol conquests[4] at up to 60 million. As concerns a belligerent's losses in proportion to its prewar population, the most destructive war in modern history may have been the Paraguayan War (see Paraguayan War casualties). In 2013 war resulted in 31,000 deaths, down from 72,000 deaths in 1990.[5] In 2003, Richard Smalley identified war as the sixth (of ten) biggest problem facing humanity for the next fifty years.[6]</p>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6">
+    <div type="button" data-toggle="modal" data-target="#picture-slide"><a href="javascript:void(0)"><img src="images/new-war-1.jpg" style="width: 100%;"></a>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6">
+            <div type="button" data-toggle="modal" data-target="#picture-slide"><a href="javascript:void(0)"><img src="images/new-war-2.jpg" style="width: 100%;"></a>
+            </div>
+        </div>
+    </div>
+    </div>
+<p class="atc-text">War usually results in significant deterioration of infrastructure and the ecosystem, a decrease in social spending, famine, large-scale emigration from the war zone, and often the mistreatment of prisoners of war or civilians.[7][8][9] For instance, of the nine million people who were on the territory of Soviet Belarus in 1941, some 1.6 million were killed by the Germans in actions away from battlefields, including about 700,000 prisoners of war, 500,000 Jews, and 320,000 people counted as partisans (the vast majority of whom were unarmed civilians).[10] Another byproduct of some wars is the prevalence of propaganda by some or all parties in the conflict,[11] and increased revenues by weapons manufacturers.[12]</p>
+    
+        <h1>Image gallery:</h1>
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4">
+            <div type="button" data-toggle="modal" data-target="#picture-slide" style="margin-bottom: 16px;"><a href="javascript:void(0)"><img src="images/new-war-1.jpg" style="width: 100%;"></a>
+            </div>
+            <div type="button" data-toggle="modal" data-target="#picture-slide" style="margin-bottom: 16px;"><a href="javascript:void(0)"><img src="images/new-war-2.jpg" style="width: 100%;"></a>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4">
+            <div type="button" data-toggle="modal" data-target="#picture-slide" style="margin-bottom: 16px;"><a href="javascript:void(0)"><img src="images/new-war-2.jpg" style="width: 100%;"></a>
+            </div>
+            <div id="more-img" type="button" data-toggle="modal" data-target="#picture-slide" style="margin-bottom: 16px;"><a href="javascript:void(0)"><div class="images-show"><div class="images-show-number"><h3>+4</h3></div><img src="images/new-war-2.jpg" style="width: 100%;">
+                </div></a>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4">
+            <div type="button" data-toggle="modal" data-target="#picture-slide" style="margin-bottom: 16px;"><a href="javascript:void(0)"><img src="images/new-war-2.jpg" style="width: 100%;"></a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="spliter" style="margin-top: 0; margin-bottom: 5px;"></div>
+    <div class="panel panel-default" style="border: none; box-shadow: none; margin-bottom: 40px;">
+                <div class="panel-body" style="padding:0;">
+    <div style="float:left;">
+                    <a href="#" class="btn btn-primary btn-sl" style="background-color: #3B5998; text-align:center; border-radius: 10px;">
+                    <span class="fa fa-facebook" style="font-size:16px;"></span>  
+                    </a>
+                    <a href="#" class="btn btn-primary btn-sl" style="background-color: #0084b4; text-align:center; border-radius: 15px;">
+                    <span class="fa fa-twitter" style="font-size:16px;"></span>
+                    </a>
+                    <a href="#" class="btn btn-primary btn-sl" style="border: none;background-color: #d34836; text-align:center; border-radius: 10px;">
+                    <i class="fa fa-google-plus" style="font-size:20px;"></i>
+                    </a>
+    <h3 style="float:left; margin:8px;">Share</h3>
+                    </div>
+        </div>
+    </div>
+</div>
+        <div class="col-xs-12 col-sm-4 col-md-4" id="news-rec">
+            <h2 style="margin-top: 0;">Recommended</h2>
+            <div class="panel panel-default" style="box-shadow: none; border-radius: 4px; margin-top: 0;">
+                <div class="panel-body">
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-5" style="padding-right: 0;">
+                                <img src="images/culture.jpg" style="border-top: 1px solid black;">
+                            </div>
+                            <div class="col-xs-7 col-md-7">
+                                <h3 class="column-text" style="margin-top: 0;">New tradicional festival "Ei,studente, sukis Veju!"</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-5" style="padding-right: 0;">
+                                <img src="images/strike.jpg" style="border-top: 1px solid black;">
+                            </div>
+                            <div class="col-xs-7 col-md-7">
+                                <h3 class="column-text" style="margin-top: 0;">Major strike agains new work law.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-5" style="padding-right: 0;">
+                                <img src="images/putin.jpg" style="border-top: 1px solid black;">
+                            </div>
+                            <div class="col-xs-7 col-md-7">
+                                <h3 class="column-text" style="margin-top: 0;">Putin reveals his plans about East Europe.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-5" style="padding-right: 0;">
+                                <img src="images/money.jpg" style="border-top: 1px solid black;">
+                            </div>
+                            <div class="col-xs-7 col-md-7">
+                                <h3 class="column-text" style="margin-top: 0;">More than 30 million euros siezed at customs.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-5" style="padding-right: 0;">
+                                <img src="images/women.jpg" style="border-top: 1px solid black;">
+                            </div>
+                            <div class="col-xs-7 col-md-7">
+                                <h3 class="column-text" style="margin-top: 0;">Perfect man by women.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-5" style="padding-right: 0;">
+                                <img src="images/basketbal.jpg" style="border-top: 1px solid black;">
+                            </div>
+                            <div class="col-xs-7 col-md-7">
+                                <h3 class="column-text" style="margin-top: 0;">Raptors win again.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-5" style="padding-right: 0;">
+                                <img src="images/drugs.jpg" style="border-top: 1px solid black;">
+                            </div>
+                            <div class="col-xs-7 col-md-7">
+                                <h3 class="column-text" style="margin-top: 0;">Medicine prices ar going up.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; margin:5px;">
+                        <div class="panel-body slider-ver">
+                            <div class="row">
+                            <div class="col-xs-5 col-md-5" style="padding-right: 0;">
+                                <img src="images/suicide.jpg" style="border-top: 1px solid black;">
+                            </div>
+                            <div class="col-xs-7 col-md-7">
+                                <h3 class="column-text" style="margin-top: 0;">More children are suiciding than ever before.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a class="linked" href="#"><div class="panel panel-default" style="box-shadow: none; border: none; margin:5px;">
+                        <div class="panel-body slider-ver" >
+                            <div class="row">
+                            <div class="col-xs-5 col-md-5" style="padding-right: 0;">
+                                <img src="images/soccer.jpg" style="border-top: 1px solid black;">
+                            </div>
+                            <div class="col-xs-7 col-md-7">
+                                <h3 class="column-text" style="margin-top: 0;">Football becoming the most favorite sport.</h3>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+   </div>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Sing in</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                        <form>
+                            <div id="login"> 
+                            <h3 id="message">A new code has been send to your email.</h3>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                            </div>
+                            <br>
+                            <div style="text-align: center">
+                            <button class="btn btn-primary" id="log-btn">Login</button>
+                            </div>
+                            </div>
+                        <div id="lost-pass">
+                            <h3>Tipe your email. You will receive a new code. You can change it later on.</h3>
+                            <input type="text" class="form-control" name="Email" placeholder="Email" value="">
+                            <br>
+                            <div style="text-align: center">
+                            <button class="btn btn-success" id="submit">Submit</button>
+                            <button id="stop-recover" class="btn btn-danger">Cancel</button>
+                            </div>
+                        </div>
+                        <div id="reg-account">
+                                <input type="text" class="form-control" name="password" placeholder="Email">
+                            <br>
+                                <input type="password" class="form-control" name="password" placeholder="Password">
+                            <br>
+                                <input type="password" class="form-control" placeholder="Repeat password">
+                            <br>
+                                <input type="Text" class="form-control" placeholder="Country">
+                            <br>
+                                <div class="row">
+                                    <div class="col-xs-4 col-sm-4 col-md-4"><input type="password" class="form-control" name="password" placeholder="Day"></div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4"><input type="text" class="form-control" placeholder="Month"></div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4"><input type="text" class="form-control" placeholder="Year"></div>
+                            </div>
+                            <br>
+                            <div style="text-align: center">
+                            <button class="btn btn-success" id="btn2">Register</button>
+                            <button id="cancel" class="btn btn-danger">Cancel</button>
+                            </div>
+                        </div>
+                        </form>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6" style="text-align: center;">
+                                <h3>Don't have an account? <button type="button" class="btn btn-primary" id="register">Register</button></h3>
+                                <h3>Forgot password? <button class="btn btn-primary" type="button" id="forgot-pass">Recover</button></h3>
+                                
+                                <h3>Connect with:</h3>
+                                <a href="#" class="btn btn-primary btn-lg" style="background-color: #0084b4; width:60px; text-align:center;">
+                                <span class="fa fa-twitter" style="font-size: 30px;"></span>
+                                </a>    
+                                <a href="#" class="btn btn-primary btn-lg" style="background-color: #3B5998; width:60px; text-align:center;">
+                                <span class="fa fa-facebook" style="font-size: 30px;"></span>
+                                </a>
+                                <a href="#" class="btn btn-primary btn-lg" style="background-color: #d34836; width:60px; text-align:center;">
+                                <span class="fa fa-google-plus" style="font-size: 30px;"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+        </div>
+        </div>
+<div class="modal fade" id="picture-slide" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" style="background-color: rgba(0,0,0,0); box-shadow: none; border:none;">
+        <div class="modal-header" style="border: none;">
+          <button id="x-btn" type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+           <div class="col-xs-12 col-sm-10 col-md-6" style="float: none; margin: 0 auto;">
+          <div class="slider-for" style="width:100%;">
+  <div class=""><img src="images/education.jpg" alt=""></div>
+  <div class=""><img src="images/car-crash.jpg" alt=""></div>
+  <div class=""><img src="images/army.png" alt=""></div>
+ <div class=""><img src="images/education.jpg" alt=""></div>
+  <div class=""><img src="images/car-crash.jpg" alt=""></div>
+  <div class=""><img src="images/army.png" alt=""></div>
+  <div class=""><img src="images/education.jpg" alt=""></div>
+  <div class=""><img src="images/car-crash.jpg" alt=""></div>
+  <div class=""><img src="images/army.png" alt=""></div>
+</div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12" style="float: none; margin: 0 auto;">
+        <div class="slider-nav" style="width: 100%;">
+            
+  <div class="image-slider"><img src="images/education.jpg" alt=""></div>
+  <div class="image-slider"><img src="images/car-crash.jpg" alt=""></div>
+  <div class="image-slider"><img src="images/army.png" alt=""></div>
+ <div class="image-slider"><img src="images/education.jpg" alt=""></div>
+  <div class="image-slider"><img src="images/car-crash.jpg" alt=""></div>
+  <div class="image-slider"><img src="images/army.png" alt=""></div>
+  <div class="image-slider"><img src="images/education.jpg" alt=""></div>
+  <div class="image-slider"><img src="images/car-crash.jpg" alt=""></div>
+  <div class="image-slider"><img src="images/army.png" alt=""></div>
+         </div>
+            </div>
+            </div>
+        </div>
+        <div class="modal-footer" style="border-top: none;">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+<footer class="container-fluid" style="padding: 0;">
+                <div class="main-footer">
+                    <a href=""><h3>About us</h3></a>
+                    <a href=""><h3>Terms of Servise</h3></a>
+                    <a href=""><h3>Cookies</h3></a>
+                    <a href=""><h3>Privacy policy</h3></a>
+                    <a href=""><h3>Copyright</h3></a>
+            </div>
+</footer>
+<script type="text/javascript">
+$('#picture-slide').on('shown.bs.modal', function () {
+    $('.modal-backdrop').css('opacity','0.9');
+    $('.slider-nav').slick('setPosition');
+    $('.slider-for').slick('setPosition');
+});
+$('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav',
+});
+$('.slider-nav').slick({
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  asNavFor: '.slider-for',
+  centerMode: true,
+  focusOnSelect: true,
+});
+    
+$("#forgot-pass").click(function(){
+    $("#login").css("display","none");
+    $("#reg-account").css("display","none");
+    $("#lost-pass").css("display","block");
+});
+    
+$("#stop-recover").click(function(){
+    $("#lost-pass").css("display","none");
+    $("#login").css("display","block");
+});
+    
+$("#submit").click(function(){
+    $("#lost-pass").css("display","none");
+    $("#login").css("display","block");
+    $("#message").show().delay(10000).fadeOut();
+});
+    
+$("#register").click(function(){
+    $("#login").css("display","none");
+    $("#lost-pass").css("display","none");
+    $("#reg-account").css("display","block");
+});
+$("#cancel").click(function(){
+    $("#login").css("display","block");
+    $("#reg-account").css("display","none");
+});
+
+$("#log-btn").click(function(){
+    $("#myModal").modal("hide");
+    $("#account").css("display","block");
+    $("#sign-in").css("display","none");
+    $("#logo").css({'margin-left':'5px'});
+});
+
+$(document).ready(function() {
+  // slick carousel
+  $('#atc-slid').slick({
+    vertical: true,
+    autoplay:true,
+    autoplaySpeed:1500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    verticalSwiping: true,
+  });
+});
+
+$('.dropdown-menu').click(function(e) {
+   e.stopPropagation();
+});
+    
+$(document).ready(function(){
+    $(".input-group").dropdown();
+});
+
+var x = $( "#post" ).width();
+document.getElementById("yes").style.width=(x+"px");
+    
+$(window).resize(function() {
+var y = $( "#post" ).width();
+document.getElementById("yes").style.width=(y+"px");
+});
+</script>
+</body>
+</html>
