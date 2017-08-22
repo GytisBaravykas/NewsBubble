@@ -1,4 +1,5 @@
 # NewsBubble
 A news website with asp.net
-Disign finished.
+
+Design finished.
 Front-end under development.
